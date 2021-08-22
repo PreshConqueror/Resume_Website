@@ -37,7 +37,7 @@ html::-webkit-scrollbar-thumb{
 }
 
 body{
-    background:rgb(25, 27, 27);
+    background:rgb(209, 133, 136);
     overflow-x: hidden;
     padding-left: 35rem;
 }
@@ -175,6 +175,22 @@ header .navbar ul li a:hover{
     padding: 1rem 0;
 }
 
+* {
+    box-sizing: border-box;
+  }
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
 .about .row{
     display: flex;
     align-items: center;
@@ -303,6 +319,55 @@ header .navbar ul li a:hover{
     transform: scale(1.2);
 }
 
+.certifications .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    padding-left: 3rem;
+}
+
+.certifications .box-container .box{
+    width:27rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+
+.certifications .box-container .box span{
+    font-size: 1.3rem;
+    background:#222;
+    color:#fff;
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+.certifications .box-container .box h3{
+    font-size: 2rem;
+    color:#fff;
+    padding-top: 1.5rem;
+}
+
+.certifications .box-container .box p{
+    font-size: 1.4rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+
+.certifications .box-container .box i{
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:#fff;
+    background:var(--pink);
+}
 .contact .row{
     display: flex;
     align-items: center;
@@ -452,6 +517,10 @@ header .navbar ul li a:hover{
         width:100%;
     }
 
+    .certifications .box-container .box{
+        width:100%;
+    }
+    
     .contact .row form{
         margin:3rem 0;
     }
